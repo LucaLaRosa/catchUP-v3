@@ -27,9 +27,9 @@ public class ViewPagerAdapter extends FragmentPagerAdapter{
 		case 1:
 			return new WhiteFragment();
 		case 2:
-			return new BlackFragment();
+			return new ThirdFragment();
 		case 3:
-			return new WhiteFragment();
+			return new FourthFragment();
 		case 4:
 			return new BlackFragment();
 
