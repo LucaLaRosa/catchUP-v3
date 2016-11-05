@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:id="@+id/rl_Container"
+    android:background="@android:color/black"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal" >
+<Button
+    android:id="@+id/btn_exit"
+    android:layout_width="50dip"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="110dip"
+    android:layout_marginTop="15dip"
+    android:text="X"
+    xmlns:android="http://schemas.android.com/apk/res/android" />
+
+<TextView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/message_frag"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" />
+
+
+</LinearLayout>
