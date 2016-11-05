@@ -54,7 +54,7 @@ public class ThirdFragment extends android.support.v4.app.Fragment {
 
     private void initializeList() {
         list = new LinkedList<>();
-        list.add(new ContactInfo("punto AAA", 14, "tutto molto buono"));
+        list.add(new ContactInfo("punto Antolet", 14, "tutto molto buono"));
         list.add(new ContactInfo("punto verde", 99, "tutto molto cattivo"));
         list.add(new ContactInfo("punto blu", 4, "tutto molto buonino"));
         list.add(new ContactInfo("punto giallo", 1, "tutto molto accattivante"));
