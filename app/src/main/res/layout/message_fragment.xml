@@ -1,24 +1,75 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:id="@+id/rl_Container"
-    android:background="@android:color/black"
-    android:layout_height="fill_parent"
-    android:orientation="horizontal" >
-<Button
-    android:id="@+id/btn_exit"
-    android:layout_width="50dip"
-    android:layout_height="wrap_content"
-    android:layout_marginLeft="110dip"
-    android:layout_marginTop="15dip"
-    android:text="X"
-    xmlns:android="http://schemas.android.com/apk/res/android" />
-
-<TextView
+<TableLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/message_frag"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent" />
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:shrinkColumns="*"  android:stretchColumns="*" android:background="#ee7777">
+    <TableRow>
+        <Button
+            android:id="@+id/btn_exit"
+            android:layout_width="match_parent"
+            android:layout_span="3"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dip"
+            android:layout_marginTop="0dip"
+            android:text="Go Back"
+            android:gravity="left|center_vertical"
+            android:background="@drawable/arrow"
+            android:paddingLeft="60dip"
+            xmlns:android="http://schemas.android.com/apk/res/android" />
+    </TableRow>
+
+    <!-- Row 1 with single column -->
+    <TableRow
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:gravity="center_horizontal">
 
 
-</LinearLayout>
+        <TextView
+            android:layout_width="50dip"
+            android:layout_marginTop="10dip"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:text="Ciao! come va?"
+
+            android:layout_span="2"
+            android:padding="18dip"
+            android:background="#b0b0b0"
+            android:textColor="#000"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:layout_span="1"
+            android:padding="18dip"
+            android:background="#ee7777"
+            android:textColor="#000"/>
+
+    </TableRow>
+</TableLayout>
+
+    <!--<?xml version="1.0" encoding="utf-8"?>
+     android:background="#ed4949"
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:id="@+id/rl_Container"
+        android:background="#ee7777"
+        android:layout_height="fill_parent"
+        android:orientation="horizontal" >
+    <Button
+        android:id="@+id/btn_exit"
+        android:layout_width="50dip"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="110dip"
+        android:layout_marginTop="15dip"
+        android:text="X"
+        xmlns:android="http://schemas.android.com/apk/res/android" />
+
+    <TextView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/message_frag"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+    </LinearLayout>-->
