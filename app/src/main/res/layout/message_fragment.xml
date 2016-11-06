@@ -1,53 +1,104 @@
-<TableLayout
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal" >
+
+
+    <RelativeLayout
+        android:layout_alignParentBottom="true"
+        android:id="@+id/antolet"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:gravity="center_horizontal"
+        android:background="#88dddd">
+        <!--android:layout_marginTop="300dip">-->
+        <EditText
+            android:id="@+id/fname"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="Type a message"
+            />
+
+    </RelativeLayout>
+    <TableLayout android:layout_above="@id/antolet"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:shrinkColumns="*"  android:stretchColumns="*" android:background="#ee7777">
-    <TableRow>
-        <Button
-            android:id="@+id/btn_exit"
-            android:layout_width="match_parent"
-            android:layout_span="3"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="0dip"
-            android:layout_marginTop="0dip"
-            android:text="Go Back"
-            android:gravity="left|center_vertical"
-            android:background="@drawable/arrow"
-            android:paddingLeft="60dip"
-            xmlns:android="http://schemas.android.com/apk/res/android" />
-    </TableRow>
+    android:shrinkColumns="*"
+    android:stretchColumns="*"
+    android:background="#88dddd">
+        <TableRow>
+            <Button
+                android:id="@+id/btn_exit"
+                android:layout_width="match_parent"
+                android:layout_span="3"
+                android:layout_height="35dip"
+                android:layout_marginLeft="0dip"
+                android:layout_marginTop="0dip"
+                android:text="Go Back"
+                android:gravity="left|center_vertical"
+                android:background="@drawable/arrow"
+                android:paddingLeft="60dip"
+                xmlns:android="http://schemas.android.com/apk/res/android" />
+        </TableRow>
+        <!-- Row 1  -->
 
-    <!-- Row 1 with single column -->
-    <TableRow
+        <TableRow
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18dp"
+                android:layout_span="1"
+                android:padding="18dip"
+                android:background="#88dddd"
+            android:textColor="#000"/>
+            <TextView
+                android:layout_width="30dip"
+                android:layout_marginTop="30dip"
+                android:layout_height="wrap_content"
+                android:textSize="18dp"
+                android:text="Ciao! come va?"
+                android:background="@drawable/rounded_chat_corner2"
+                android:layout_span="2"
+                android:padding="18dip"
+                android:textColor="#000"/>
+        </TableRow>
+        <!-- Row 2  -->
+        <TableRow
         android:layout_height="wrap_content"
         android:layout_width="fill_parent"
         android:gravity="center_horizontal">
 
 
-        <TextView
-            android:layout_width="50dip"
-            android:layout_marginTop="10dip"
-            android:layout_height="wrap_content"
-            android:textSize="18dp"
-            android:text="Ciao! come va?"
+            <TextView
+                android:layout_width="50dip"
+                android:layout_marginTop="30dip"
+                android:layout_height="wrap_content"
+                android:textSize="18dp"
+                android:text="Ciaoooo! io bene tu?"
+                android:background="@drawable/rounded_chat_corner"
+                android:layout_span="2"
+                android:padding="18dip"
+                android:textColor="#fff"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18dp"
+                android:layout_span="1"
+                android:padding="18dip"
+                android:background="#88dddd"
+                android:textColor="#000"/>
 
-            android:layout_span="2"
-            android:padding="18dip"
-            android:background="#b0b0b0"
-            android:textColor="#000"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="18dp"
-            android:layout_span="1"
-            android:padding="18dip"
-            android:background="#ee7777"
-            android:textColor="#000"/>
+        </TableRow>
 
-    </TableRow>
-</TableLayout>
 
+
+        </TableLayout>
+</RelativeLayout>
     <!--<?xml version="1.0" encoding="utf-8"?>
      android:background="#ed4949"
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
