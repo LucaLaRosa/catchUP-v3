@@ -9,10 +9,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.antolet.catchup.contacts.ContactAdapter;
 import com.antolet.catchup.people.PeopleAdapter;
 import com.antolet.catchup.people.Person;
+import com.antolet.catchup.people.PersonImpl;
 
+import java.util.LinkedList;
 import java.util.List;
 
 /**
@@ -53,6 +54,17 @@ public class NearbyFragment extends Fragment {
     }
 
     private void initializeList() {
+        list = new LinkedList<>();
+        list.add(new PersonImpl("Luca", "M", R.drawable.person1));
+        list.add(new PersonImpl("Giulia", "F", R.drawable.person2));
+        list.add(new PersonImpl("Veronica", "F", R.drawable.person3));
+        list.add(new PersonImpl("Antonio", "M", R.drawable.person4));
+        list.add(new PersonImpl("Andrea", "M", R.drawable.person5));
+        list.add(new PersonImpl("Carlo", "M", R.drawable.person6));
+        list.add(new PersonImpl("Miriana", "F", R.drawable.person7));
+        list.add(new PersonImpl("Marco", "M", R.drawable.person8));
+        list.add(new PersonImpl("Guido", "M", R.drawable.person9));
+        list.add(new PersonImpl("Chiara", "F", R.drawable.person10));
 
     }
 

@@ -5,4 +5,9 @@ package com.antolet.catchup.people;
  */
 
 public interface Person {
+
+    String getName();
+
+    String getSex();
+
 }
