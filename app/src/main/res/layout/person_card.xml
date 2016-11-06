@@ -5,11 +5,12 @@
     android:id="@+id/card_view"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    card_view:cardCornerRadius="8dp"
-    android:layout_margin="5dp">
+    card_view:cardCornerRadius="10dp"
+    android:layout_margin="5dp"
+    android:backgroundTint="@color/wallet_bright_foreground_holo_dark">
 
     <RelativeLayout
-        android:padding="10dp"
+        android:backgroundTint="@color/cardview_dark_background"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -20,31 +21,18 @@
             android:textAlignment="center"
             android:background="@android:color/background_dark"
             android:text="Title"
-            android:gravity="center_vertical"
+            android:gravity="center_horizontal"
             android:textColor="@android:color/white"
             android:textSize="14dp"
+            android:paddingLeft="5dp"
             />
 
         <ImageView
             android:id="@+id/image"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="250px"
+            android:layout_height="250px"
             android:layout_below="@+id/name"
             android:padding="10dp"
-            />
-
-        <TextView
-            android:id="@+id/sex"
-            android:layout_alignRight="@+id/image"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Sex"
-            android:layout_margin="15dp"
-            android:textSize="20dp"
-            android:textColor="@color/com_facebook_device_auth_text"
-            android:backgroundTint="@color/cardview_light_background"
-            android:paddingLeft="10dp"
-
             />
 
         <TextView
@@ -52,13 +40,27 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Just some infos.."
-            android:gravity="center_vertical"
+            android:gravity="center_horizontal"
             android:textSize="15dp"
             android:layout_below="@+id/image"
             android:layout_marginTop="5dp"
             android:layout_marginLeft="5dp"
+            android:paddingBottom="5dp"
+            android:paddingLeft="5dp"
             />
 
+        <TextView
+            android:id="@+id/sex"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sex"
+            android:textSize="14dp"
+            android:textColor="@color/com_facebook_device_auth_text"
+            android:backgroundTint="@color/cardview_light_background"
+            android:paddingLeft="10dp"
+            android:layout_toRightOf="@+id/image"
+            android:layout_marginRight="15dp"
+            android:layout_centerVertical="true" />
 
 
     </RelativeLayout>

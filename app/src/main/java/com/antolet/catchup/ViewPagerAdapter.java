@@ -25,7 +25,7 @@ public class ViewPagerAdapter extends FragmentPagerAdapter{
 			return new FirstFragment();
 		//da qui in poi cambiare con i nuovi fragment "nearby, points..."
 		case 1:
-			return new WhiteFragment();
+			return new NearbyFragment();
 		case 2:
 			return new ThirdFragment();
 		case 3:

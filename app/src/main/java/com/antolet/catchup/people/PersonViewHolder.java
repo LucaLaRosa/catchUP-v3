@@ -16,16 +16,15 @@ public class PersonViewHolder extends RecyclerView.ViewHolder {
     public ImageView vImage;
     public TextView vName;
     public TextView vSex;
-    public ImageView vImageView;
+    public TextView vInfo;
 
     public PersonViewHolder(View itemView) {
         super(itemView);
 
-
-        vName =(TextView)itemView.findViewById(R.id.name);
-        vImage =(ImageView)itemView.findViewById(R.id.image);
-        vSex =(TextView)itemView.findViewById(R.id.sex);
-        vImageView =(ImageView) itemView.findViewById(R.id.thumbnail);
+        this.vName =(TextView)itemView.findViewById(R.id.name);
+        this.vImage =(ImageView)itemView.findViewById(R.id.image);
+        this.vSex =(TextView)itemView.findViewById(R.id.sex);
+        this.vInfo =(TextView) itemView.findViewById(R.id.info);
 
     }
 
