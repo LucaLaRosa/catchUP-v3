@@ -7,8 +7,6 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.antolet.catchup.R;
-import com.antolet.catchup.contacts.ContactInfo;
-import com.antolet.catchup.contacts.ContactViewHolder;
 
 import java.util.List;
 
@@ -36,7 +34,9 @@ public class PeopleAdapter extends RecyclerView.Adapter {
     }
 
     @Override
-    public void onBindViewHolder(PersonViewHolder personHolder, int position) {
+    public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
+        Log.d("peopleAdapter", "onBindViewHolder: ");
+        PersonViewHolder personHolder = (PersonViewHolder) holder;
         PersonImpl person = list.get(position);
         personHolder.vName.setText(person.getName());
         personHolder.vSex.setText("Sesso: " + person.getSex());

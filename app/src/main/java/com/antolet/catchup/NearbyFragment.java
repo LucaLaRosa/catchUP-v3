@@ -10,7 +10,6 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.antolet.catchup.people.PeopleAdapter;
-import com.antolet.catchup.people.Person;
 import com.antolet.catchup.people.PersonImpl;
 
 import java.util.LinkedList;
@@ -22,7 +21,7 @@ import java.util.List;
 
 public class NearbyFragment extends Fragment {
 
-    private List<Person> list;
+    private List<PersonImpl> list;
 
     RecyclerView peopleRecycler;
     PeopleAdapter adapter;
