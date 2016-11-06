@@ -10,14 +10,30 @@
         android:layout_height="wrap_content"
         android:layout_width="fill_parent"
         android:gravity="center_horizontal"
-        android:background="#88dddd">
+        android:background="#ed4948">
         <!--android:layout_marginTop="300dip">-->
+
+        <Button
+            android:id="@+id/btn_send"
+            android:layout_width="35dip"
+            android:layout_height="35dip"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/send"
+            xmlns:android="http://schemas.android.com/apk/res/android" />
         <EditText
-            android:id="@+id/fname"
+            android:id="@+id/contenutoMessaggio"
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@id/btn_send"
+            android:layout_centerVertical="true"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:hint="Type a message"
+            android:background="@null"
+            android:layout_marginLeft="10dip"
+            android:textColor="#fff"
             />
+
+
 
     </RelativeLayout>
     <TableLayout android:layout_above="@id/antolet"
