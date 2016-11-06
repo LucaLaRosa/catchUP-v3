@@ -1,5 +1,6 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
+    android:id="@+id/relativeLayout"
     android:layout_height="fill_parent"
     android:orientation="horizontal" >
 
@@ -110,7 +111,34 @@
                 android:textColor="#000"/>
 
         </TableRow>
+        <!-- Row 3  -->
 
+        <TableRow
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18dp"
+                android:layout_span="1"
+                android:padding="18dip"
+                android:background="#88dddd"
+                android:textColor="#000"/>
+            <TextView
+                android:id="@+id/last_msg"
+                android:layout_width="30dip"
+                android:layout_marginTop="30dip"
+                android:layout_height="wrap_content"
+                android:textSize="18dp"
+                android:text=""
+                android:background="@drawable/rounded_chat_corner2"
+                android:layout_span="2"
+                android:padding="18dip"
+                android:textColor="#000"
+                android:visibility="invisible"/>
+        </TableRow>
 
 
         </TableLayout>

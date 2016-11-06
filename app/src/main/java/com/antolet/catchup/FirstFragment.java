@@ -50,8 +50,6 @@ public class FirstFragment extends Fragment {
 
         googleMap = mMapView.getMap();
         // latitude and longitude
-        double latitude = 44.8033073;
-        double longitude = 10.318977399999994;
 
         // create marker
         MarkerOptions marker = new MarkerOptions().position(new LatLng( 44.80330734, 10.318977399999994)).title("Emma").snippet("23 YO");
@@ -63,7 +61,7 @@ public class FirstFragment extends Fragment {
         // adding marker1
         googleMap.addMarker(marker);
         CameraPosition cameraPosition = new CameraPosition.Builder()
-                .target(new LatLng(44.8033073, 10.3593354)).zoom(20).build();
+                .target(new LatLng(44.8033073, 10.3593354)).zoom(18).build();
         googleMap.animateCamera(CameraUpdateFactory
                 .newCameraPosition(cameraPosition));
         googleMap.setMyLocationEnabled(true);
@@ -130,11 +128,67 @@ public class FirstFragment extends Fragment {
         });
 
 
-        //ant:
-        googleMap.getUiSettings().setZoomControlsEnabled(false);
+        // adding marker6 -campus
+        MarkerOptions marker6 = new MarkerOptions().position(new LatLng(44.764642, 10.312136)).title("Amanda").snippet("25 YO");
+
+        marker6.icon(BitmapDescriptorFactory.fromResource(R.drawable.usr3));
+
+        googleMap.addMarker(marker6);
+        googleMap.setOnInfoWindowClickListener(new GoogleMap.OnInfoWindowClickListener() {
+
+            @Override
+            public void onInfoWindowClick(Marker arg0) {
+
+                Toast.makeText(getActivity(), "Manda un messaggio a "+arg0.getTitle(), Toast.LENGTH_SHORT).show();
+                Fragment mFragment = new MessageFragment();
+
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.mapView, mFragment).commit();
+            }
+        });
+
+        // adding marker7 -campus
+        MarkerOptions marker7 = new MarkerOptions().position(new LatLng(44.764919, 10.312104)).title("Silvia").snippet("22 YO");
+
+        marker7.icon(BitmapDescriptorFactory.fromResource(R.drawable.usr1));
+
+        googleMap.addMarker(marker7);
+        googleMap.setOnInfoWindowClickListener(new GoogleMap.OnInfoWindowClickListener() {
+
+            @Override
+            public void onInfoWindowClick(Marker arg0) {
+
+                Toast.makeText(getActivity(), "Manda un messaggio a "+arg0.getTitle(), Toast.LENGTH_SHORT).show();
+                Fragment mFragment = new MessageFragment();
+
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.mapView, mFragment).commit();
+            }
+        });
+
+        // adding marker8 -campus
+        MarkerOptions marker8 = new MarkerOptions().position(new LatLng(44.764919, 10.311338)).title("Marta").snippet("19 YO");
+
+        marker8.icon(BitmapDescriptorFactory.fromResource(R.drawable.usr2));
+
+        googleMap.addMarker(marker8);
+        googleMap.setOnInfoWindowClickListener(new GoogleMap.OnInfoWindowClickListener() {
+
+            @Override
+            public void onInfoWindowClick(Marker arg0) {
+
+                Toast.makeText(getActivity(), "Manda un messaggio a "+arg0.getTitle(), Toast.LENGTH_SHORT).show();
+                Fragment mFragment = new MessageFragment();
+
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.mapView, mFragment).commit();
+            }
+        });
+
+//ant: ---------------------------- /blocca lo scrolling della mappa
+
+        /*googleMap.getUiSettings().setZoomControlsEnabled(false);
         googleMap.getUiSettings().setScrollGesturesEnabled(false);
         mMapView.getMap().getUiSettings().setAllGesturesEnabled(false);
-
+*/
+//---------------------------------
 
         double radiusInMeters = 10.0;
         //red outline
