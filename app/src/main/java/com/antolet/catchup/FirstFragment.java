@@ -182,12 +182,49 @@ public class FirstFragment extends Fragment {
             }
         });
 
+        // adding marker9 -campus
+        MarkerOptions marker9 = new MarkerOptions().position(new LatLng(44.764620, 10.311504)).title("Marco").snippet("26 YO");
+
+        marker9.icon(BitmapDescriptorFactory.fromResource(R.drawable.usr4));
+
+        googleMap.addMarker(marker9);
+        googleMap.setOnInfoWindowClickListener(new GoogleMap.OnInfoWindowClickListener() {
+
+            @Override
+            public void onInfoWindowClick(Marker arg0) {
+
+                Toast.makeText(getActivity(), "Manda un messaggio a "+arg0.getTitle(), Toast.LENGTH_SHORT).show();
+                Fragment mFragment = new MessageFragment();
+
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.mapView, mFragment).commit();
+            }
+        });
+
+        // adding marker10 -campus
+        MarkerOptions marker10 = new MarkerOptions().position(new LatLng(44.764783, 10.312812)).title("Matteo").snippet("23 YO");
+
+        marker10.icon(BitmapDescriptorFactory.fromResource(R.drawable.usr5));
+
+        googleMap.addMarker(marker10);
+        googleMap.setOnInfoWindowClickListener(new GoogleMap.OnInfoWindowClickListener() {
+
+            @Override
+            public void onInfoWindowClick(Marker arg0) {
+
+                Toast.makeText(getActivity(), "Manda un messaggio a "+arg0.getTitle(), Toast.LENGTH_SHORT).show();
+                Fragment mFragment = new MessageFragment();
+
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.mapView, mFragment).commit();
+            }
+        });
+
+
 //ant: ---------------------------- /blocca lo scrolling della mappa
 
-        /*googleMap.getUiSettings().setZoomControlsEnabled(false);
+        googleMap.getUiSettings().setZoomControlsEnabled(false);
         googleMap.getUiSettings().setScrollGesturesEnabled(false);
         mMapView.getMap().getUiSettings().setAllGesturesEnabled(false);
-*/
+
 //---------------------------------
 
         double radiusInMeters = 10.0;
