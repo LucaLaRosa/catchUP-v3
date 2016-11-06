@@ -24,9 +24,9 @@
 
 	<LinearLayout  android:id="@+id/drawer"
         android:layout_width="240dp"
+        android:background="#ed847f"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        android:background="@android:color/white"
         android:orientation="vertical">
 
         <TextView
@@ -38,6 +38,19 @@
             android:layout_marginTop="15dp"
             android:layout_marginLeft="15dp"
             android:textSize="20sp"/>
+        <Button
+            android:id="@+id/btn_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:layout_marginLeft="35dp"
+            android:background="@drawable/rounded_chat_corner"
+            android:layout_span="2"
+            android:padding="18dip"
+            android:textColor="#fff"
+            android:text="About CatchUP"
+            />
+
         <com.facebook.login.widget.LoginButton
             android:id="@+id/login_button"
             android:layout_width="wrap_content"

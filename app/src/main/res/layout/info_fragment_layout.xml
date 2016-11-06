@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="#ed847f"
+    android:gravity="center"
+    android:textColor="#ed4948"
+    android:textAppearance="?android:attr/textAppearanceLarge"
+    android:text="\u00A9 2016 CatchUP \n Luca La Rosa &amp; \n Antonio Lettieri \n PARMA - ITALY"
+    />
+     

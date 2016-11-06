@@ -18,6 +18,7 @@
         android:theme="@style/AppTheme" >
         <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id" />
         <activity
+            android:windowSoftInputMode="stateHidden"
             android:name="com.antolet.catchup.MainActivity">
             <!--android:label="@string/app_name">-->
             <intent-filter>

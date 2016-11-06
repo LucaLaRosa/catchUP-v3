@@ -6,6 +6,7 @@ import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v4.app.ActionBarDrawerToggle;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
@@ -14,6 +15,7 @@ import android.support.v7.app.ActionBarActivity;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -47,6 +49,21 @@ public class MainActivity extends ActionBarActivity {
 		FacebookSdk.sdkInitialize(getApplicationContext());
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+
+
+		Button btnInfo = (Button) findViewById(R.id.btn_info);
+		btnInfo.setOnClickListener(new View.OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+
+				InfoFragment info = new InfoFragment();  //this is your new fragment.
+				FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+				ft.replace(R.id.drawer, info);
+				ft.commit();
+			}
+
+		});
 
 		//costruzione actionBar
 
@@ -92,10 +109,10 @@ public class MainActivity extends ActionBarActivity {
 					public void onSuccess(LoginResult loginResult) {
 
 						Profile profile = Profile.getCurrentProfile();
-						String  idUtente= profile.getId();
+						String idUtente = profile.getId();
 
 						String msgWelcome = "Benvenuto " + profile.getFirstName() + "!";
-						String infoUser= "\n \n id: "+ idUtente;
+						String infoUser = "\n \n id: " + idUtente;
 						testoFrag.setText(msgWelcome + infoUser);
 
 
@@ -131,6 +148,7 @@ public class MainActivity extends ActionBarActivity {
 
         mSlidingTabLayout = (SlidingTabLayout) findViewById(R.id.sliding_tabs);
         mSlidingTabLayout.setViewPager(mViewPager);
+
     }
 
 	@Override
